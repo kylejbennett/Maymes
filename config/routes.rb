@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  get 'dishes/index'
+
+  get 'dishes/new'
+
+  get 'dishes/create'
+
+  get 'dishes/update'
+
+  get 'dishes/destroy'
+
+  get 'users/index'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
   get 'welcome/index'
   root 'welcome#index'
 
