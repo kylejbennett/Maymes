@@ -2,7 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.construction{
-	text-align: center;
-	font-family: 'Caudex', sans-serif;
+.home-image{
+	position: fixed;
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('/sandwich.jpeg');
+	background-size: cover;
 }
+
+.logo{
+	width: 100vw;
+	text-align: center;
+	padding-top: 75px;
+	font-family: 'Caudex';
+	color: white;
+
+	h1{
+		font-size: 26pt;
+		margin: 0;
+	}
+
+	h2{
+		font-size: 22pt;
+		margin: 0;
+	}
+
+	p{
+		font-family: 'Lato';
+	}
+}
+
+.admin{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-family: 'Lato';
+	font-size: 16pt;
+
+	a{
+		visibility: hidden;
+		text-decoration: none;
+	}
+}
+
+.admin:hover{
+	a{
+		visibility: visible;
+		color: blue;
+	}
+}
+

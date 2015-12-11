@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Maymes</title>
+  <title>Mayme's Cafe & Catering</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/maymelogo.png">
+  <link href='https://fonts.googleapis.com/css?family=Caudex|Lato:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<% if flash[:notice] %>
+		<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
+	
+	<% if flash[:alert] %>
+		<div class="alert">
+			<%= flash[:alert] %>
+		</div>
+	<% end %>
+
+	<div class="nav">
+		<ul>
+			<li>
+				<%= link_to 'CAFE', root_path %>
+			</li>
+			<li>
+				<%= link_to 'MENU', dishes_path %>
+			</li>
+			<li>
+				<%= link_to 'CONTACT US', welcome_contact_path %>
+			</li>
+		</ul>
+	</div>
+
+	<% if session[:user_id] != nil %>
+		<div class="session">
+			<ul>
+				<li>
+					<%= link_to 'MANAGE DISHES', manage_path %>
+				</li>
+				<li>
+					<%= link_to 'NEW DISH', new_dish_path %>
+				</li>
+				<li>
+					<%= link_to 'LOG OUT', sessions_path, method: :delete %>
+				</li>
+			</ul>
+		</div>
+	<% end %>
 
 <%= yield %>
 

@@ -2,7 +2,16 @@ class DishesController < ApplicationController
   def index
   end
 
+  def manage
+  end
+
   def new
+  end
+
+  def edit
+  end
+
+  def show
   end
 
   def create
@@ -13,4 +22,7 @@ class DishesController < ApplicationController
 
   def destroy
   end
+
+  private
+
 end

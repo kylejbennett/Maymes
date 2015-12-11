@@ -1,26 +1,17 @@
 Rails.application.routes.draw do
-  get 'dishes/index'
+  get 'login', to: 'sessions#new'
+  post '/sessions', to: 'sessions#create'
+  delete '/sessions',   to: 'sessions#destroy'
 
-  get 'dishes/new'
+  resources :users
+  resources :dishes
 
-  get 'dishes/create'
-
-  get 'dishes/update'
-
-  get 'dishes/destroy'
-
-  get 'users/index'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/update'
-
-  get 'users/destroy'
-
-  get 'welcome/index'
   root 'welcome#index'
+  get 'welcome/index'
+  get 'welcome/contact'
+
+  get '/manage' => 'dishes#manage'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

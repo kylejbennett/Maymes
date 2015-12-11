@@ -5,6 +5,9 @@ class UsersController < ApplicationController
   def new
   end
 
+  def edit
+  end
+
   def create
   end
 
@@ -13,4 +16,7 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  private
+
 end
