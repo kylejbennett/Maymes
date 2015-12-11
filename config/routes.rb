@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/index'
   get 'welcome/contact'
+  get 'welcome/mayme'
 
   get '/manage' => 'dishes#manage'
   

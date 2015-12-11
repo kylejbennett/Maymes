@@ -1,6 +1,9 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	margin: 0;
+}
 
 .home-image{
 	position: fixed;
@@ -9,6 +12,15 @@
 	height: 100vh;
 	background-image: url('/sandwich.jpeg');
 	background-size: cover;
+	// opacity: 0.5;
+}
+
+.backdrop{
+	position: fixed;
+	z-index: -2;
+	width: 100vw;
+	height: 100vh;	
+	background: black;
 }
 
 .logo{
@@ -17,19 +29,27 @@
 	padding-top: 75px;
 	font-family: 'Caudex';
 	color: white;
+	
+	.sub{
+		background: rgba(0,0,0,0.6);
+		border-radius: 10px;
+		text-align: center;
+		width: 325px;
+		margin: 0 auto;
 
-	h1{
-		font-size: 26pt;
-		margin: 0;
-	}
+		h1{
+			font-size: 26pt;
+			margin: 0;
+		}
 
-	h2{
-		font-size: 22pt;
-		margin: 0;
-	}
+		h2{
+			font-size: 22pt;
+			margin: 0;
+		}
 
-	p{
-		font-family: 'Lato';
+		p{
+			font-family: 'Lato';
+		}
 	}
 }
 
