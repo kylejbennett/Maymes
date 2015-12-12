@@ -79,7 +79,9 @@
 }
 
 .center{
+	margin: 0 auto;
 	font-family: 'Lato';
 	text-align: center;
 	padding-top: 100px;
+	width: 400px;
 }

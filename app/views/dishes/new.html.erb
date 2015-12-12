@@ -1,3 +1,15 @@
 <div class="center">
 	<h1>Add a new Dish</h1>
+
+	<%= form_for Dish.new do |f| %>
+		<%= f.label :category %>
+		<%= f.select :category, ['Feature', 'Appetizer', 'Soup', 'Salad', 'Sandwich', 'Pasta', 'Entree', 'Dessert'] %><br>
+		<%= f.label :title %>
+		<%= f.text_field :title %><br>
+		<%= f.label :description %>
+		<%= f.text_area :description %><br>
+		<%= f.label :price %>
+		<%= f.text_field :price %><br>
+		<%= f.submit :create, data: {disable_with: "Submitting..."} %>
+	<% end %>
 </div>

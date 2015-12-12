@@ -1,3 +1,10 @@
 <div class="center">
 	<h1>Manage your Dishes</h1>
+
+	<% @dishes.each do |dish| %>
+		<div class="item">
+			<%= dish.title %>
+		</div>
+	<% end %>
+
 </div>

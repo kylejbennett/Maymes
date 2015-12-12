@@ -1,3 +1,78 @@
-<div class="center">
-	<h1>MAYME'S MENU</h1>
+<div class="menu-backdrop"></div>
+<div class="menu-page">
+	<div class="menu">
+		<h1>MAYME'S MENU</h1>
+		<br>
+		<div class="app menu-section">
+			<h2>Appetizers</h2>
+			<% @apps.each do |app| %>
+				<div class="item">
+					<h3><b><%= app.title %></b></h3>
+					<h4>$<%= app.price %></h4>
+					<p><%= app.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="soup menu-section">
+			<h2>Soups</h2>
+			<% @soups.each do |soup| %>
+				<div class="item">
+					<h3><b><%= soup.title %></b></h3>
+					<h4>$<%= soup.price %></h4>
+					<p><%= soup.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="salad menu-section">
+			<h2>Salads</h2>
+			<% @salads.each do |salad| %>
+				<div class="item">
+					<h3><b><%= salad.title %></b></h3>
+					<h4>$<%= salad.price %></h4>
+					<p><%= salad.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="sandwich menu-section">
+			<h2>Sandwiches</h2>
+			<% @sandwiches.each do |sandwich| %>
+				<div class="item">
+					<h3><b><%= sandwich.title %></b></h3>
+					<h4>$<%= sandwich.price %></h4>
+					<p><%= sandwich.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="pasta menu-section">
+			<h2>Pasta</h2>
+			<% @pastas.each do |pasta| %>
+				<div class="item">
+					<h3><b><%= pasta.title %></b></h3>
+					<h4>$<%= pasta.price %></h4>
+					<p><%= pasta.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="entree menu-section">
+			<h2>Entrees</h2>
+			<% @entrees.each do |entree| %>
+				<div class="item">
+					<h3><b><%= entree.title %></b></h3>
+					<h4>$<%= entree.price %></h4>
+					<p><%= entree.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="dessert menu-section">
+			<h2>Desserts</h2>
+			<% @desserts.each do |dessert| %>
+				<div class="item">
+					<h3><b><%= dessert.title %></b></h3>
+					<h4>$<%= dessert.price %></h4>
+					<p><%= dessert.description %></p>
+				</div>
+			<% end %>
+		</div>
+	</div>
 </div>
+
