@@ -27,7 +27,7 @@ body{
 	width: 100vw;
 	text-align: center;
 	padding-top: 75px;
-	font-family: 'Caudex';
+	font-family: 'Caudex', serif;
 	color: white;
 	
 	.sub{
@@ -48,7 +48,7 @@ body{
 		}
 
 		p{
-			font-family: 'Lato';
+			font-family: 'Lato', sans-serif;
 		}
 	}
 }
@@ -73,3 +73,18 @@ body{
 	}
 }
 
+// ##MAYME##
+
+.about{
+	margin: 0 auto;
+	width: 400px;
+
+	h1{
+		font-family: 'Caudex', serif;
+	}
+
+	p{
+		font-size: 16pt;
+		font-family: 'Lato', sans-serif;
+	}
+}

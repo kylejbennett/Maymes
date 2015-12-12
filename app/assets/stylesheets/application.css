@@ -38,7 +38,7 @@
 	position: fixed;
 	top: 25px;
 	left: 20px;
-	font-family: 'Lato';
+	font-family: 'Lato', sans-serif;
 	font-size: 16pt;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .session{
-	font-family: 'Lato';
+	font-family: 'Lato', sans-serif;
 	font-size: 16pt;
 	position: fixed;
 	right: 20px;
