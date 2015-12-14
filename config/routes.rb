@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'welcome/contact'
   get 'welcome/mayme'
+  post 'welcome/sendmail' => 'welcome#sendmail'
 
   get '/manage' => 'dishes#manage'
   
