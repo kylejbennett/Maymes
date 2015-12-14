@@ -1,15 +1,30 @@
 <div class="center">
 	<h1>Add a new Dish</h1>
-
-	<%= form_for Dish.new do |f| %>
-		<%= f.label :category %>
-		<%= f.select :category, ['Feature', 'Appetizer', 'Soup', 'Salad', 'Sandwich', 'Pasta', 'Entree', 'Dessert'] %><br>
-		<%= f.label :title %>
-		<%= f.text_field :title %><br>
-		<%= f.label :description %>
-		<%= f.text_area :description %><br>
-		<%= f.label :price %>
-		<%= f.text_field :price %><br>
-		<%= f.submit :create, data: {disable_with: "Submitting..."} %>
-	<% end %>
+	<div class="new-form">
+		<%= form_for Dish.new do |f| %>
+			<div class="form-section">
+			<%= f.label :category %><br>
+			<%= f.select :category, ['Feature', 'Soup', 'Salad', 'Sandwich', 'Veg Sandwich', 'Seafood Sandwich', 'Burger', 'Beverage', 'Topping', 'Side', 'Kids', 'Dessert'] %>
+			</div>
+			<br>
+			<div class="form-section">
+			<%= f.label :title %><br>
+			<%= f.text_field :title %>
+			</div>
+			<br>
+			<div class="form-section">
+			<%= f.label :description %><br>
+			<%= f.text_area :description %>
+			</div>
+			<br>
+			<div class="form-section">
+			<%= f.label :price %><br>
+			<%= f.text_field :price, class: "price" %>
+			</div>
+			<br>
+			<div class="form-section">
+			<%= f.submit :create, class: "submit", data: {disable_with: "Submitting..."} %>
+			</div>
+		<% end %>
+	</div>
 </div>

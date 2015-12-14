@@ -3,28 +3,22 @@
 	<div class="menu">
 		<h1>MAYME'S MENU</h1>
 		<br>
-		<div class="app menu-section">
-			<h2>Appetizers</h2>
-			<% @apps.each do |app| %>
-				<div class="item">
-					<h3><b><%= app.title %></b></h3>
-					<h4>$<%= app.price %></h4>
-					<p><%= app.description %></p>
-				</div>
-			<% end %>
-		</div>
 		<div class="soup menu-section">
 			<h2>Soups</h2>
+			<h3>HOMEMADE SOUP OF THE DAY</h3>
 			<% @soups.each do |soup| %>
 				<div class="item">
 					<h3><b><%= soup.title %></b></h3>
 					<h4>$<%= soup.price %></h4>
-					<p><%= soup.description %></p>
 				</div>
 			<% end %>
 		</div>
 		<div class="salad menu-section">
 			<h2>Salads</h2>
+			<p>
+				“Not just lettuce at Mayme’s!” A mixture of romaine and iceburg lettuce with tomatoes, cucumbers, kalamata olives, onions and hard cooked eggs.
+			</p>
+			<br>
 			<% @salads.each do |salad| %>
 				<div class="item">
 					<h3><b><%= salad.title %></b></h3>
@@ -32,9 +26,44 @@
 					<p><%= salad.description %></p>
 				</div>
 			<% end %>
+			<p>
+				CHOICE OF DRESSING:<br>
+				 • House Dressing <br>
+				 • Balsamic Vinaigrette Ranch<br>
+				 • 1,000 Island<br>
+				 • Lite Italian Creamy Cucumber<br>
+				*Dry Bleu Cheese and House Dressing 1.00 extra<br> *All salads served with bread of the day
+			</p>
+		</div>
+		<div class="burger menu-section">
+			<h2>George's All American Burgers</h2>
+			<p>
+				Our burgers are all a 1/2 pound of fresh ground beef, handmade daily and char-grilled. Served on a toasted brioche or whole grain roll.
+				You can also substitute our house made Veggie or Turkey burger for any of our burgers for 1.00 extra.<br><em>Add cup of soup or select side 1.95</em>
+			</p>
+			<% @burgers.each do |burger| %>
+				<div class="item">
+					<h3><b><%= burger.title %></b></h3>
+					<h4>$<%= burger.price %></h4>
+					<p><%= burger.description %></p>
+				</div>
+			<% end %>
+			<p><em>
+				Extra lettuce and tomato .30<br>
+				Caramelized Onions .35<br>
+				Sauerkraut .50<br>
+				Extra cheese .40<br>
+				Mushrooms .65<br>
+				Large kosher pickle 1.00<br>
+				Avocado 1.25</em>
+			</p>
 		</div>
 		<div class="sandwich menu-section">
-			<h2>Sandwiches</h2>
+			<h2>Mayme's Cafe Deli Style Sandwiches</h2>
+			<p>
+				Any sandwich can be pressed into a Panini or made as a Wrap (12 inch flour or wheat).<br>
+				<em>Add cup of soup or select side 1.95</em>
+			</p>
 			<% @sandwiches.each do |sandwich| %>
 				<div class="item">
 					<h3><b><%= sandwich.title %></b></h3>
@@ -43,23 +72,66 @@
 				</div>
 			<% end %>
 		</div>
-		<div class="pasta menu-section">
-			<h2>Pasta</h2>
-			<% @pastas.each do |pasta| %>
+		<div class="seafood menu-section">
+			<h2>From the Ocean</h2>
+			<p>
+				<em>Add cup of soup or select side 1.95</em>
+			</p>
+			<% @seafood.each do |seafood| %>
 				<div class="item">
-					<h3><b><%= pasta.title %></b></h3>
-					<h4>$<%= pasta.price %></h4>
-					<p><%= pasta.description %></p>
+					<h3><b><%= seafood.title %></b></h3>
+					<h4>$<%= seafood.price %></h4>
+					<p><%= seafood.description %></p>
 				</div>
 			<% end %>
 		</div>
-		<div class="entree menu-section">
-			<h2>Entrees</h2>
-			<% @entrees.each do |entree| %>
+		<div class="veg menu-section">
+			<h2>Meatless and Delicious Sandwiches</h2>
+			<% @vegs.each do |veg| %>
 				<div class="item">
-					<h3><b><%= entree.title %></b></h3>
-					<h4>$<%= entree.price %></h4>
-					<p><%= entree.description %></p>
+					<h3><b><%= veg.title %></b></h3>
+					<h4>$<%= veg.price %></h4>
+					<p><%= veg.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="kids menu-section">
+			<h2>For The Kids</h2>
+			<% @kids.each do |kid| %>
+				<div class="item">
+					<h3><b><%= kid.title %></b></h3>
+					<h4>$<%= kid.price %></h4>
+					<p><%= kid.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="sides menu-section">
+			<h2>On The Side</h2>
+			<% @sides.each do |side| %>
+				<div class="item">
+					<h3><b><%= side.title %></b></h3>
+					<h4>$<%= side.price %></h4>
+					<p><%= side.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="toppings menu-section">
+			<h2>Toppings</h2>
+			<% @toppings.each do |topping| %>
+				<div class="item">
+					<h3><b><%= topping.title %></b></h3>
+					<h4>$<%= topping.price %></h4>
+					<p><%= topping.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="beverages menu-section">
+			<h2>Beverages</h2>
+			<% @beverages.each do |beverage| %>
+				<div class="item">
+					<h3><b><%= beverage.title %></b></h3>
+					<h4>$<%= beverage.price %></h4>
+					<p><%= beverage.description %></p>
 				</div>
 			<% end %>
 		</div>

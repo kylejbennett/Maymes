@@ -9,10 +9,10 @@
 					Subject: <%= select_tag(:subject, options_for_select(['Customer Feedback', 'Catering Inquiry'], selected: :option)) %>
 					<br>
 					<br>
-					<%= text_field_tag(:name, nil, :placeholder => "Name", size: "40x1", required: true)%>
+					<%= text_field_tag(:name, nil, :placeholder => "Your Name", size: "40x1", required: true)%>
 					<br>
 					<br>
-					<%= email_field_tag(:email, nil, :placeholder => "Email", size: "40x1", required: true) %>
+					<%= email_field_tag(:email, nil, :placeholder => "Your Email", size: "40x1", required: true) %>
 				</div>
 				<br>
 				<!-- SECOND PANEL -->

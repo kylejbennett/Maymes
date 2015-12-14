@@ -23,7 +23,7 @@
 		margin: 100px auto;
 		padding: 8%;
 		font-family: 'Lato', sans-serif;
-		background: rgba(255,255,255,0.6);
+		background: rgba(255,255,255,0.8);
 		border-radius: 15px;
 
 		h1{
@@ -34,8 +34,7 @@
 
 			h2{
 				text-align: center;
-				margin: 50px 0;
-
+				margin-top: 50px;
 			}
 
 			.item{
@@ -43,12 +42,12 @@
 
 				h3{
 					display: inline-block;
-					width: 200px;
+					width: 250px;
 					margin: 0;
 				}
 
 				h4{
-					width: 190px;
+					width: 140px;
 					margin: 0;
 					text-align: right;
 					display: inline-block;
@@ -57,6 +56,44 @@
 				p{
 				}
 			}
+		}
+	}
+}
+
+// ## NEW ##
+
+.new-form{
+	margin-top: 50px;
+
+	.form-section{
+		margin: 10px 0;
+
+		label{
+			font-size: 16pt;
+			padding-bottom: 10px;
+		}
+		
+		input{
+			width: 400px;
+			height: 30px;
+			font-family: 'Lato';
+			font-size: 14px;
+			text-align: center;
+		}
+
+		textarea{
+			width: 400px;
+			height: 100px;
+			font-family: 'Lato';
+			font-size: 14pt;
+		}
+
+		.price{
+			width: 150px;
+		}
+
+		.submit{
+			width: 100px;
 		}
 	}
 }

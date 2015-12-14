@@ -1,14 +1,17 @@
 class DishesController < ApplicationController
   def index
     @dishes = Dish.all
-    @apps = Dish.where(category: 'Appetizer')
     @soups = Dish.where(category: 'Soup')
     @salads = Dish.where(category: 'Salad')
     @sandwiches = Dish.where(category: 'Sandwich')
-    @pastas = Dish.where(category: 'Pasta')
-    @entrees = Dish.where(category: 'Entree')
+    @seafood = Dish.where(category: 'Seafood Sandwich')
+    @vegs = Dish.where(category: 'Veg Sandwich')
+    @burgers = Dish.where(category: 'Burger')
     @desserts = Dish.where(category: 'Dessert')
-
+    @beverages = Dish.where(category: 'Beverage')
+    @toppings = Dish.where(category: 'Topping')
+    @sides = Dish.where(category: 'Side')
+    @kids = Dish.where(category: 'Kids')
   end
 
   def manage
@@ -31,10 +34,10 @@ class DishesController < ApplicationController
     
     if @dish.save
       flash[:notice] = "Your dish has been added"
-      redirect_to manage_path
+      redirect_to new_dish_path
     else
       flash[:alert] = "There was a problem with your dish"
-      redirect_to "new_dish_path"
+      redirect_to new_dish_path
     end
   end
 
