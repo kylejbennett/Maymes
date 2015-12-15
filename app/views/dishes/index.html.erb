@@ -87,6 +87,10 @@
 		</div>
 		<div class="veg menu-section">
 			<h2>Meatless and Delicious Sandwiches</h2>
+			<p>
+				Any sandwich can be pressed into a Panini or made as a Wrap. (12 inch flour or wheat).<br>
+				<em>Add cup of soup or select side 1.95</em>
+			</p>
 			<% @vegs.each do |veg| %>
 				<div class="item">
 					<h3><b><%= veg.title %></b></h3>
@@ -97,11 +101,13 @@
 		</div>
 		<div class="kids menu-section">
 			<h2>For The Kids</h2>
+			<p>
+				10 years or younger.  Includes Potato OR Veggie.
+			</p>
 			<% @kids.each do |kid| %>
 				<div class="item">
 					<h3><b><%= kid.title %></b></h3>
 					<h4>$<%= kid.price %></h4>
-					<p><%= kid.description %></p>
 				</div>
 			<% end %>
 		</div>
@@ -136,14 +142,10 @@
 			<% end %>
 		</div>
 		<div class="dessert menu-section">
-			<h2>Desserts</h2>
-			<% @desserts.each do |dessert| %>
-				<div class="item">
-					<h3><b><%= dessert.title %></b></h3>
-					<h4>$<%= dessert.price %></h4>
-					<p><%= dessert.description %></p>
-				</div>
-			<% end %>
+			<h2>Mayme's Desserts</h2>
+			<p>
+				Try our Fresh Daily Featured Desserts!
+			</p>
 		</div>
 	</div>
 </div>
