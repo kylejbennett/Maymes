@@ -9,7 +9,7 @@
 			<% @soups.each do |soup| %>
 				<div class="item">
 					<h3><b><%= soup.title %></b></h3>
-					<h4>$<%= soup.price %></h4>
+					<h4><%= number_to_currency(soup.price, :precision => 2) %></h4>
 				</div>
 			<% end %>
 		</div>
@@ -22,7 +22,7 @@
 			<% @salads.each do |salad| %>
 				<div class="item">
 					<h3><b><%= salad.title %></b></h3>
-					<h4>$<%= salad.price %></h4>
+					<h4><%= number_to_currency(salad.price, :precision => 2) %></h4>
 					<p><%= salad.description %></p>
 				</div>
 			<% end %>
@@ -32,19 +32,19 @@
 				 • Balsamic Vinaigrette Ranch<br>
 				 • 1,000 Island<br>
 				 • Lite Italian Creamy Cucumber<br>
-				*Dry Bleu Cheese and House Dressing 1.00 extra<br> *All salads served with bread of the day
+				*Dry Bleu Cheese and House Dressing $1.00 extra<br> *All salads served with bread of the day
 			</p>
 		</div>
 		<div class="burger menu-section">
 			<h2>George's All American Burgers</h2>
 			<p>
 				Our burgers are all a 1/2 pound of fresh ground beef, handmade daily and char-grilled. Served on a toasted brioche or whole grain roll.
-				You can also substitute our house made Veggie or Turkey burger for any of our burgers for 1.00 extra.<br><em>Add cup of soup or select side 1.95</em>
+				You can also substitute our house made Veggie or Turkey burger for any of our burgers for $1.00 extra.<br><em>Add cup of soup or select side $1.95</em>
 			</p>
 			<% @burgers.each do |burger| %>
 				<div class="item">
 					<h3><b><%= burger.title %></b></h3>
-					<h4>$<%= burger.price %></h4>
+					<h4><%= number_to_currency(burger.price, :precision => 2) %></h4>
 					<p><%= burger.description %></p>
 				</div>
 			<% end %>
@@ -67,7 +67,7 @@
 			<% @sandwiches.each do |sandwich| %>
 				<div class="item">
 					<h3><b><%= sandwich.title %></b></h3>
-					<h4>$<%= sandwich.price %></h4>
+					<h4><%= number_to_currency(sandwich.price, :precision => 2) %></h4>
 					<p><%= sandwich.description %></p>
 				</div>
 			<% end %>
@@ -80,7 +80,7 @@
 			<% @seafood.each do |seafood| %>
 				<div class="item">
 					<h3><b><%= seafood.title %></b></h3>
-					<h4>$<%= seafood.price %></h4>
+					<h4><%= number_to_currency(seafood.price, :precision => 2) %></h4>
 					<p><%= seafood.description %></p>
 				</div>
 			<% end %>
@@ -94,7 +94,7 @@
 			<% @vegs.each do |veg| %>
 				<div class="item">
 					<h3><b><%= veg.title %></b></h3>
-					<h4>$<%= veg.price %></h4>
+					<h4><%= number_to_currency(veg.price, :precision => 2) %></h4>
 					<p><%= veg.description %></p>
 				</div>
 			<% end %>
@@ -107,7 +107,7 @@
 			<% @kids.each do |kid| %>
 				<div class="item">
 					<h3><b><%= kid.title %></b></h3>
-					<h4>$<%= kid.price %></h4>
+					<h4><%= number_to_currency(kid.price, :precision => 2) %></h4>
 				</div>
 			<% end %>
 		</div>
@@ -116,18 +116,8 @@
 			<% @sides.each do |side| %>
 				<div class="item">
 					<h3><b><%= side.title %></b></h3>
-					<h4>$<%= side.price %></h4>
+					<h4><%= number_to_currency(side.price, :precision => 2) %></h4>
 					<p><%= side.description %></p>
-				</div>
-			<% end %>
-		</div>
-		<div class="toppings menu-section">
-			<h2>Toppings</h2>
-			<% @toppings.each do |topping| %>
-				<div class="item">
-					<h3><b><%= topping.title %></b></h3>
-					<h4>$<%= topping.price %></h4>
-					<p><%= topping.description %></p>
 				</div>
 			<% end %>
 		</div>
@@ -136,8 +126,21 @@
 			<% @beverages.each do |beverage| %>
 				<div class="item">
 					<h3><b><%= beverage.title %></b></h3>
-					<h4>$<%= beverage.price %></h4>
-					<p><%= beverage.description %></p>
+					<h4><%= number_to_currency(beverage.price, :precision => 2) %></h4>
+					<% if beverage.description != nil %>
+						<p>
+							<%= beverage.description %>
+						</p>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+		<div class="toppings menu-section">
+			<h2>Toppings</h2>
+			<% @toppings.each do |topping| %>
+				<div class="item">
+					<h3><b><%= topping.title %></b></h3>
+					<h4><%= number_to_currency(topping.price, :precision => 2) %></h4>
 				</div>
 			<% end %>
 		</div>

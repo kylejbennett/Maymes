@@ -1,3 +1,34 @@
 <div class="center">
-	<h1>Edit Dish</h1>
+	<h1>EDIT: <%= @dish.title %></h1>
+	<div class="new-form">
+		<%= form_for @dish, :html => { :multipart => true } do |f| %>
+			<div class="form-section">
+				<%= f.label :category %><br>
+				<%= f.select :category, ['Feature', 'Soup', 'Salad', 'Sandwich', 'Veg Sandwich', 'Seafood Sandwich', 'Burger', 'Beverage', 'Topping', 'Side', 'Kids', 'Dessert'] %>
+			</div>
+			<br>
+			<div class="form-section">
+				<%= f.label :title %><br>
+				<%= f.text_field :title %>
+			</div>
+			<br>
+			<div class="form-section">
+				<%= f.label :description %><br>
+				<%= f.text_area :description %>
+			</div>
+			<br>
+			<div class="form-section">
+				<%= f.label :price %><br>
+				<%= f.text_field :price, class: "price" %>
+			</div>
+			<br>
+			<div class="form-section">
+				<%= f.submit class: "submit" %>
+			</div>
+		<% end %>
+		<span>
+			<%=link_to "Delete this Dish", dish_path, method: :delete, data: {confirm: "Delete this Dish?"} %>
+		</span>
+	</div>
 </div>
+

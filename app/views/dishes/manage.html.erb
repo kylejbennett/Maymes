@@ -1,10 +1,152 @@
-<div class="center">
-	<h1>Manage your Dishes</h1>
-
-	<% @dishes.each do |dish| %>
-		<div class="item">
-			<%= dish.title %>
+<div class="menu-page">
+	<div class="menu">
+		<h1>MANAGE THE MENU</h1>
+		<br>
+		<div class="soup menu-section">
+			<h2>Soups</h2>
+			<% @soups.each do |soup| %>
+				<div class="item">
+					<h3><b><%= link_to soup.title, edit_dish_path(soup) %></b></h3>
+					<h4><%= number_to_currency(soup.price, :precision => 2) %></h4>
+				</div>
+			<% end %>
 		</div>
-	<% end %>
-
+		<div class="salad menu-section">
+			<h2>Salads</h2>
+			<p>
+				“Not just lettuce at Mayme’s!” A mixture of romaine and iceburg lettuce with tomatoes, cucumbers, kalamata olives, onions and hard cooked eggs.
+			</p>
+			<br>
+			<% @salads.each do |salad| %>
+				<div class="item">
+					<h3><b><%= link_to salad.title, edit_dish_path(salad) %></b></h3>
+					<h4><%= number_to_currency(salad.price, :precision => 2) %></h4>
+					<p><%= salad.description %></p>
+				</div>
+			<% end %>
+			<p>
+				CHOICE OF DRESSING:<br>
+				 • House Dressing <br>
+				 • Balsamic Vinaigrette Ranch<br>
+				 • 1,000 Island<br>
+				 • Lite Italian Creamy Cucumber<br>
+				*Dry Bleu Cheese and House Dressing $1.00 extra<br> *All salads served with bread of the day
+			</p>
+		</div>
+		<div class="burger menu-section">
+			<h2>George's All American Burgers</h2>
+			<p>
+				Our burgers are all a 1/2 pound of fresh ground beef, handmade daily and char-grilled. Served on a toasted brioche or whole grain roll.
+				You can also substitute our house made Veggie or Turkey burger for any of our burgers for $1.00 extra.<br><em>Add cup of soup or select side $1.95</em>
+			</p>
+			<% @burgers.each do |burger| %>
+				<div class="item">
+					<h3><b><%= link_to burger.title, edit_dish_path(burger) %></b></h3>
+					<h4><%= number_to_currency(burger.price, :precision => 2) %></h4>
+					<p><%= burger.description %></p>
+				</div>
+			<% end %>
+			<p><em>
+				Extra lettuce and tomato .30<br>
+				Caramelized Onions .35<br>
+				Sauerkraut .50<br>
+				Extra cheese .40<br>
+				Mushrooms .65<br>
+				Large kosher pickle 1.00<br>
+				Avocado 1.25</em>
+			</p>
+		</div>
+		<div class="sandwich menu-section">
+			<h2>Mayme's Cafe Deli Style Sandwiches</h2>
+			<p>
+				Any sandwich can be pressed into a Panini or made as a Wrap (12 inch flour or wheat).<br>
+				<em>Add cup of soup or select side 1.95</em>
+			</p>
+			<% @sandwiches.each do |sandwich| %>
+				<div class="item">
+					<h3><b><%= link_to sandwich.title, edit_dish_path(sandwich) %></b></h3>
+					<h4><%= number_to_currency(sandwich.price, :precision => 2) %></h4>
+					<p><%= sandwich.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="seafood menu-section">
+			<h2>From the Ocean</h2>
+			<p>
+				<em>Add cup of soup or select side 1.95</em>
+			</p>
+			<% @seafood.each do |seafood| %>
+				<div class="item">
+					<h3><b><%= link_to seafood.title, edit_dish_path(seafood) %></b></h3>
+					<h4><%= number_to_currency(seafood.price, :precision => 2) %></h4>
+					<p><%= seafood.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="veg menu-section">
+			<h2>Meatless and Delicious Sandwiches</h2>
+			<p>
+				Any sandwich can be pressed into a Panini or made as a Wrap. (12 inch flour or wheat).<br>
+				<em>Add cup of soup or select side 1.95</em>
+			</p>
+			<% @vegs.each do |veg| %>
+				<div class="item">
+					<h3><b><%= link_to veg.title, edit_dish_path(veg) %></b></h3>
+					<h4><%= number_to_currency(veg.price, :precision => 2) %></h4>
+					<p><%= veg.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="kids menu-section">
+			<h2>For The Kids</h2>
+			<p>
+				10 years or younger.  Includes Potato OR Veggie.
+			</p>
+			<% @kids.each do |kid| %>
+				<div class="item">
+					<h3><b><%= link_to kid.title, edit_dish_path(kid) %></b></h3>
+					<h4><%= number_to_currency(kid.price, :precision => 2) %></h4>
+				</div>
+			<% end %>
+		</div>
+		<div class="sides menu-section">
+			<h2>On The Side</h2>
+			<% @sides.each do |side| %>
+				<div class="item">
+					<h3><b><%= link_to side.title, edit_dish_path(side) %></b></h3>
+					<h4><%= number_to_currency(side.price, :precision => 2) %></h4>
+					<p><%= side.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="beverages menu-section">
+			<h2>Beverages</h2>
+			<% @beverages.each do |beverage| %>
+				<div class="item">
+					<h3><b><%= link_to beverage.title, edit_dish_path(beverage) %></b></h3>
+					<h4><%= number_to_currency(beverage.price, :precision => 2) %></h4>
+					<% if beverage.description != nil %>
+						<p>
+							<%= beverage.description %>
+						</p>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+		<div class="toppings menu-section">
+			<h2>Toppings</h2>
+			<% @toppings.each do |topping| %>
+				<div class="item">
+					<h3><b><%= link_to topping.title, edit_dish_path(topping) %></b></h3>
+					<h4><%= number_to_currency(topping.price, :precision => 2) %></h4>
+				</div>
+			<% end %>
+		</div>
+		<div class="dessert menu-section">
+			<h2>Mayme's Desserts</h2>
+			<p>
+				Try our Fresh Daily Featured Desserts!
+			</p>
+		</div>
+	</div>
 </div>
