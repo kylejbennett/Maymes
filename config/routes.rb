@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post 'welcome/sendmail' => 'welcome#sendmail'
 
   get '/manage' => 'dishes#manage'
+  get '/cater' => 'dishes#cater'
+  get '/newcater' => 'dishes#newcater'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

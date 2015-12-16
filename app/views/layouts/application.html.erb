@@ -24,10 +24,16 @@
 	<div class="nav">
 		<ul>
 			<li>
-				<%= link_to 'CAFE', root_path %>
+				<%= link_to 'CAFE HOME', root_path %>
 			</li>
 			<li>
-				<%= link_to 'MENU', dishes_path %>
+				<%= link_to 'DAILY FEATURES', 'https://www.facebook.com/maymescafe/' %>
+			</li>
+			<li>
+				<%= link_to 'CAFE MENU', dishes_path %>
+			</li>
+			<li>
+				<%= link_to 'CATERING MENU', cater_path %>
 			</li>
 			<li>
 				<%= link_to 'MEET MAYME', welcome_mayme_path %>
@@ -46,6 +52,9 @@
 				</li>
 				<li>
 					<%= link_to 'NEW DISH', new_dish_path %>
+				</li>
+				<li>
+					<%= link_to 'NEW CATERING DISH', newcater_path %>
 				</li>
 				<li>
 					<%= link_to 'LOG OUT', sessions_path, method: :delete %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151211163437) do
+ActiveRecord::Schema.define(version: 20151216173351) do
 
   create_table "dishes", force: :cascade do |t|
     t.string   "category"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20151211163437) do
     t.decimal  "price",       precision: 6, scale: 2
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.decimal  "half"
+    t.decimal  "full"
   end
 
   create_table "users", force: :cascade do |t|

@@ -44,12 +44,12 @@
 
 				h3{
 					display: inline-block;
-					width: 250px;
+					width: 300px;
 					margin: 0;
 				}
 
 				h4{
-					width: 140px;
+					width: 90px;
 					margin: 0;
 					text-align: right;
 					display: inline-block;
@@ -75,16 +75,120 @@
 	}
 }
 
+// ## CATERING MENU ##
+
+.cater-menu-backdrop{
+	margin: 0;
+	width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    background-image: url('/mayme_inside.jpg');
+    background-size: cover;
+}
+
+.cater-menu-page{
+
+	.menu{
+		width: 400px;
+		margin: 100px auto;
+		padding: 8%;
+		font-family: 'Lato', sans-serif;
+		background: rgba(255,255,255,0.8);
+		border-radius: 15px;
+
+		h1{
+			text-align: center;
+			font-family: 'Caudex';
+		}
+
+		.menu-section{
+
+			h2{
+				text-align: center;
+				font-family: 'Caudex';
+				margin-top: 50px;
+			}
+
+			.item{
+				width: 400px;
+				height: 70px;
+
+				.box-left{
+					display: inline-block;
+					width: 270px;
+					float: left;
+
+					h3{
+						display: inline-block;
+						margin: 0;
+					}
+
+					p{
+						margin-top: 5px;
+					}
+				}
+
+				.box-right{
+					display: inline-block;
+					width: 125px;
+					float: right;
+
+					h4{
+						margin-top: 0;
+					}
+				}
+
+				h3{
+					display: inline-block;
+					width: 270px;
+					margin: 0;
+				}
+
+				h4{
+					width: 125px;
+					margin: 0;
+					text-align: right;
+					display: inline-block;
+				}
+
+				p{
+					margin-top: 5px;
+				}
+
+			}
+
+			.clear{
+				clear: both;
+			}
+		}
+
+		.dessert{
+			p{
+				text-align: center;
+			}
+		}
+
+		.sides{
+			.item{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
 // ## NEW ##
 
 .new-form{
-	margin-top: 50px;
+	margin-top: 25px;
 
 	.form-section{
-		margin: 10px 0;
+		margin: 5px 0;
 
 		label{
-			font-size: 16pt;
+			font-size: 18pt;
 			padding-bottom: 10px;
 		}
 		
@@ -92,7 +196,7 @@
 			width: 400px;
 			height: 30px;
 			font-family: 'Lato';
-			font-size: 14px;
+			font-size: 16px;
 			text-align: center;
 		}
 
@@ -109,6 +213,15 @@
 
 		.submit{
 			width: 100px;
+		}
+	}
+
+	.pricing{
+		text-align: left;
+		height: 50px;
+
+		input{
+			float: right;
 		}
 	}
 }

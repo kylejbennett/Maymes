@@ -1,0 +1,103 @@
+<div class="cater-menu-backdrop"></div>
+<div class="cater-menu-page">
+	<div class="menu">
+		<h1>MAYME'S CATERING MENU</h1>
+		<br>
+		<div class="salad menu-section">
+			<h2>Salads</h2>
+			<p>
+				“Not just lettuce at Mayme’s!” A mixture of romaine and iceburg lettuce with tomatoes, cucumbers, kalamata olives, onions and hard cooked eggs.
+			</p>
+			<br>
+			<% @cater_salads.each do |salad| %>
+				<div class="item">
+					<div class="box-left">
+						<h3><b><%= salad.title %></b></h3>	
+						<p><%= salad.description %></p>
+					</div>
+					<div class="box-right">
+						<h4>
+							Half Tray <%= number_to_currency(salad.half, :precision => 2) %>
+							<br>
+							Full Tray <%= number_to_currency(salad.full, :precision => 2) %>
+						</h4>
+					</div>
+				</div>
+			<% end %>
+			<div class="clear"></div>
+			<p>
+				CHOICE OF DRESSING:<br>
+				 • House Dressing <br>
+				 • Balsamic Vinaigrette Ranch<br>
+				 • 1,000 Island<br>
+				 • Lite Italian<br> 
+				 • Creamy Cucumber<br>
+				*Dry Bleu Cheese available at extra cost
+			</p>
+		</div>
+		<div class="sandwich menu-section">
+			<h2>Deli Sandwich Trays</h2>
+			<p>
+				Choose from our variety of meats, cheeses, breads or wraps.
+			</p>
+			<% @cater_sandwiches.each do |sandwich| %>
+				<div class="item">
+					<h3><b><%= sandwich.title %></b></h3>
+					<h4><%= number_to_currency(sandwich.price, :precision => 2) %></h4>
+					<p><%= sandwich.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="veggies menu-section">
+			<h2>Fresh Roasted Seasonal Veggies</h2>
+			<% @vegetables.each do |vegetable| %>
+				<div class="item">
+					<h3><b><%= vegetable.title %></b></h3>
+					<h4><%= number_to_currency(vegetable.price, :precision => 2) %></h4>
+					<p><%= vegetable.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="extras menu-section">
+			<h2>Sides and Extras</h2>
+			<% @extras.each do |extra| %>
+				<div class="item">
+					<h3><b><%= extra.title %></b></h3>
+					<h4><%= number_to_currency(extra.price, :precision => 2) %></h4>
+					<p><%= extra.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="sides menu-section">
+			<h2>Meat Specialties</h2>
+			<% @meats.each do |meat| %>
+				<div class="item">
+					<h3><b><%= meat.title %></b></h3>
+					<p><%= meat.description %></p>
+				</div>
+			<% end %>
+		</div>
+		<div class="beverages menu-section">
+			<h2>Poultry Ideas</h2>
+			<% @poultries.each do |poultry| %>
+				<div class="item">
+					<h3><b><%= poultry.title %></b></h3>
+					<p>
+						<%= poultry.description %>
+					</p>
+				</div>
+			<% end %>
+		</div>
+		<div class="toppings menu-section">
+			<h2>Pastas</h2>
+			<% @pastas.each do |pasta| %>
+				<div class="item">
+					<h3><b><%= pasta.title %></b></h3>
+					<p>
+						<%= pasta.description %>
+					</p>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

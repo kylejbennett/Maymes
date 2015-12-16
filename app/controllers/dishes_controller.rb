@@ -27,6 +27,28 @@ class DishesController < ApplicationController
     @toppings = Dish.where(category: 'Topping')
     @sides = Dish.where(category: 'Side')
     @kids = Dish.where(category: 'Kids')
+    @cater_salads = Dish.where(category: 'cater_salad')
+    @cater_sandwiches = Dish.where(category: 'cater_sandwich')
+    @vegetables = Dish.where(category: 'cater_veg')
+    @extras = Dish.where(category: 'cater_extras')
+    @meats = Dish.where(category: 'cater_meat')
+    @poultries = Dish.where(category: 'cater_poultry')
+    @pastas = Dish.where(category: 'cater_pasta')
+  end
+
+  def cater
+    @cater_salads = Dish.where(category: 'cater_salad')
+    @cater_sandwiches = Dish.where(category: 'cater_sandwich')
+    @vegetables = Dish.where(category: 'cater_veg')
+    @extras = Dish.where(category: 'cater_extras')
+    @meats = Dish.where(category: 'cater_meat')
+    @poultries = Dish.where(category: 'cater_poultry')
+    @pastas = Dish.where(category: 'cater_pasta')
+
+  end
+
+  def newcater
+  
   end
 
   def new
@@ -74,7 +96,7 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:dish).permit(:category, :title, :description, :price)
+    params.require(:dish).permit(:category, :title, :description, :price, :half, :full)
   end
 
 end
