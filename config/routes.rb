@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   get '/manage' => 'dishes#manage'
   get '/cater' => 'dishes#cater'
   get '/newcater' => 'dishes#newcater'
-  
+
+  post 'activate' => 'dishes#activate'
+  post 'deactivate' => 'dishes#deactivate'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

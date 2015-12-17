@@ -41,6 +41,7 @@
 
 			.item{
 				width: 400px;
+				position: relative;
 
 				h3{
 					display: inline-block;
@@ -57,6 +58,52 @@
 
 				p{
 					margin-top: 5px;
+				}
+
+				.activation{
+					display: inline-block;
+					position: absolute;
+					left: -40px;
+					top: 0;
+					text-align: center;
+					text-decoration: none;
+					font-size: 15pt;
+					color: green;
+				}
+
+				.deactivation{
+					display: inline-block;
+					position: absolute;
+					left: -40px;
+					top: 0;
+					text-align: center;
+					text-decoration: none;
+					font-size: 15pt;
+					color: red;
+				}
+
+				.fa-check-circle{
+					display: inline-block;
+					position: absolute;
+					left: -40px;
+					top: 2px;
+					text-align: center;
+					text-decoration: none;
+					font-size: 15pt;
+				}
+			}
+		}
+
+		.soup{
+			h3{
+				font-size: 17pt;
+			}
+
+			.item{
+				margin-bottom: 10px;
+
+				h3{
+					font-size: 14pt;
 				}
 			}
 		}
@@ -76,6 +123,12 @@
 		.sides{
 			.item{
 				margin-bottom: 0;
+			}
+		}
+
+		.kids{
+			.item{
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -120,7 +173,39 @@
 
 			.item{
 				width: 400px;
-				height: 70px;
+				position: relative;
+
+				.activation{
+					display: inline-block;
+					position: absolute;
+					left: -40px;
+					top: 0;
+					text-align: center;
+					text-decoration: none;
+					font-size: 15pt;
+					color: green;
+				}
+
+				.deactivation{
+					display: inline-block;
+					position: absolute;
+					left: -40px;
+					top: 0;
+					text-align: center;
+					text-decoration: none;
+					font-size: 15pt;
+					color: red;
+				}
+
+				.fa-check-circle{
+					display: inline-block;
+					position: absolute;
+					left: -40px;
+					top: 2px;
+					text-align: center;
+					text-decoration: none;
+					font-size: 15pt;
+				}
 
 				.box-left{
 					display: inline-block;
@@ -171,9 +256,33 @@
 			}
 		}
 
+		.sizes{
+			h3{
+				text-align: center;
+			}
+
+			.disclaimer{
+				text-align: center;
+			}
+		}
+
 		.salad{
 			.dressing{
 				text-align: center;
+			}
+
+			.item{
+				height: 80px;
+			}
+		}
+
+		.tray{
+			text-align: center;
+		}
+
+		.meats{
+			.item{
+				height: 100px;
 			}
 		}
 
@@ -182,6 +291,12 @@
 				p{
 					text-align: center;
 				}
+			}
+		}
+
+		.pasta{
+			.item{
+				height: 115px;
 			}
 		}
 
@@ -201,7 +316,7 @@
 	margin-top: 50px;
 
 	.restaurant{
-		width: 49%;
+		width: 194px;
 		display: inline-block;
 		font-family: 'Lato';
 		font-size: 20pt;
@@ -213,7 +328,7 @@
 	}
 
 	.catering{
-		width: 49%;
+		width: 194px;
 		display: inline-block;
 		font-family: 'Lato';
 		font-size: 20pt;

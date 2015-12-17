@@ -12,6 +12,12 @@
 				<div class="item">
 					<h3><b><%= link_to soup.title, edit_dish_path(soup) %></b></h3>
 					<h4><%= number_to_currency(soup.price, :precision => 2) %></h4>
+					<% if soup.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => soup.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => soup.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 				</div>
 			<% end %>
 		</div>
@@ -25,6 +31,12 @@
 				<div class="item">
 					<h3><b><%= link_to salad.title, edit_dish_path(salad) %></b></h3>
 					<h4><%= number_to_currency(salad.price, :precision => 2) %></h4>
+					<% if salad.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => salad.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => salad.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= salad.description %></p>
 				</div>
 			<% end %>
@@ -47,6 +59,12 @@
 				<div class="item">
 					<h3><b><%= link_to burger.title, edit_dish_path(burger) %></b></h3>
 					<h4><%= number_to_currency(burger.price, :precision => 2) %></h4>
+					<% if burger.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => burger.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => burger.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= burger.description %></p>
 				</div>
 			<% end %>
@@ -70,6 +88,12 @@
 				<div class="item">
 					<h3><b><%= link_to sandwich.title, edit_dish_path(sandwich) %></b></h3>
 					<h4><%= number_to_currency(sandwich.price, :precision => 2) %></h4>
+					<% if sandwich.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => sandwich.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => sandwich.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= sandwich.description %></p>
 				</div>
 			<% end %>
@@ -83,6 +107,12 @@
 				<div class="item">
 					<h3><b><%= link_to seafood.title, edit_dish_path(seafood) %></b></h3>
 					<h4><%= number_to_currency(seafood.price, :precision => 2) %></h4>
+					<% if seafood.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => seafood.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => seafood.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= seafood.description %></p>
 				</div>
 			<% end %>
@@ -97,6 +127,12 @@
 				<div class="item">
 					<h3><b><%= link_to veg.title, edit_dish_path(veg) %></b></h3>
 					<h4><%= number_to_currency(veg.price, :precision => 2) %></h4>
+					<% if veg.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => veg.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => veg.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= veg.description %></p>
 				</div>
 			<% end %>
@@ -110,6 +146,12 @@
 				<div class="item">
 					<h3><b><%= link_to kid.title, edit_dish_path(kid) %></b></h3>
 					<h4><%= number_to_currency(kid.price, :precision => 2) %></h4>
+					<% if kid.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => kid.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => kid.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 				</div>
 			<% end %>
 		</div>
@@ -119,6 +161,12 @@
 				<div class="item">
 					<h3><b><%= link_to side.title, edit_dish_path(side) %></b></h3>
 					<h4><%= number_to_currency(side.price, :precision => 2) %></h4>
+					<% if side.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => side.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => side.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= side.description %></p>
 				</div>
 			<% end %>
@@ -129,6 +177,12 @@
 				<div class="item">
 					<h3><b><%= link_to beverage.title, edit_dish_path(beverage) %></b></h3>
 					<h4><%= number_to_currency(beverage.price, :precision => 2) %></h4>
+					<% if beverage.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => beverage.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => beverage.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<% if beverage.description != nil %>
 						<p>
 							<%= beverage.description %>
@@ -143,6 +197,12 @@
 				<div class="item">
 					<h3><b><%= link_to topping.title, edit_dish_path(topping) %></b></h3>
 					<h4><%= number_to_currency(topping.price, :precision => 2) %></h4>
+					<% if topping.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => topping.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => topping.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 				</div>
 			<% end %>
 		</div>
@@ -176,6 +236,12 @@
 							Full Tray <%= number_to_currency(salad.full, :precision => 2) %>
 						</h4>
 					</div>
+					<% if salad.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => salad.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => salad.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 				</div>
 			<% end %>
 			<div class="clear"></div>
@@ -198,9 +264,20 @@
 				<div class="item">
 					<h3><b><%= link_to sandwich.title, edit_dish_path(sandwich) %></b></h3>
 					<h4><%= number_to_currency(sandwich.price, :precision => 2) %></h4>
+					<% if sandwich.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => sandwich.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => sandwich.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= sandwich.description %></p>
 				</div>
 			<% end %>
+		</div>
+		<div class="tray menu-section">
+			<h2>Tray of Cold Cuts</h2>
+			<h3>Sliced or Cubed</h3>
+			<p>Smoked ham, salami, roasted turkey breast, Swiss cheese, provolone cheese. Add roasted beef at additional cost.<br><br>** Minimum of 10 People **</p>
 		</div>
 		<div class="veggies menu-section">
 			<h2>Fresh Roasted Seasonal Veggies</h2>
@@ -208,6 +285,12 @@
 				<div class="item">
 					<h3><b><%= link_to vegetable.title, edit_dish_path(vegetable) %></b></h3>
 					<h4><%= number_to_currency(vegetable.price, :precision => 2) %></h4>
+					<% if vegetable.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => vegetable.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => vegetable.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= vegetable.description %></p>
 				</div>
 			<% end %>
@@ -218,6 +301,12 @@
 				<div class="item">
 					<h3><b><%= link_to extra.title, edit_dish_path(extra) %></b></h3>
 					<h4><%= number_to_currency(extra.price, :precision => 2) %><%= extra.unit %></h4>
+					<% if extra.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => extra.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => extra.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p><%= extra.description %></p>
 				</div>
 			<% end %>
@@ -240,6 +329,12 @@
 							<h4><%= number_to_currency(meat.price, :precision => 2) %><%= meat.unit %></h4>
 						<% end %>
 					</div>
+					<% if meat.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => meat.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => meat.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 				</div>
 			<% end %>
 			<div class="clear"></div>
@@ -258,6 +353,12 @@
 					<% if poultry.unit != 'Normal' %>
 						<h4><%= number_to_currency(poultry.price, :precision => 2) %><%= poultry.unit %></h4>
 					<% end %>
+					<% if poultry.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => poultry.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => poultry.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 					<p>
 						<%= poultry.description %>
 					</p>
@@ -282,6 +383,12 @@
 							<h4><%= number_to_currency(pasta.price, :precision => 2) %><%= pasta.unit %></h4>
 						<% end %>
 					</div>
+					<% if pasta.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => pasta.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => pasta.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
 				</div>
 			<% end %>
 			<div class="clear"></div>

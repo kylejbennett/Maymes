@@ -63,6 +63,16 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
   end
 
+  def activate
+    @dish = Dish.find(params[:id])
+    @dish.update(status: 'Active')
+  end
+
+  def deactivate
+    @dish = Dish.find(params[:id])
+    @dish.update(status: 'Inactive')
+  end
+
   def create
     @dish = Dish.new(dish_params)
     @dish.update(status: "active")

@@ -2,6 +2,7 @@
 	<h1>EDIT: <%= @dish.title %></h1>
 	<div class="new-form">
 		<%= form_for @dish, :html => { :multipart => true } do |f| %>
+			<%= f.select :status, ['Active', 'Inactive'] %>
 			<div class="form-section">
 				<%= f.label :category %><br>
 				<%= f.select :category, ['Feature', 'Soup', 'Salad',  'Sandwich', 'Veg Sandwich', 'Seafood Sandwich', 'Burger', 'Beverage', 'Topping', 'Side', 'Kids', 'Dessert', ['Catering Salad', 'cater_salad'], ['Catering Sandwich', 'cater_sandwich'], ['Catering Vegetable', 'cater_veg'], ['Catering Extras', 'cater_extras'],  ['Catering Meat', 'cater_meat'], ['Catering Poultry', 'cater_poultry'], ['Catering Pasta', 'cater_pasta']] %>
