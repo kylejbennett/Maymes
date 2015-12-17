@@ -28,6 +28,7 @@
 			<div class="pricing form-section">
 				<%= f.label 'Fixed Price' %>
 				<%= f.text_field :price, class: "price" %>
+				<%= f.select :unit, ['Normal', ['Per Pound', '/lb'], ['Per Quart', '/qt'], ['Per Dozen', '/doz']] %>
 			</div>
 			<br>
 			<div class="form-section">

@@ -20,7 +20,7 @@
 
 	.menu{
 		width: 400px;
-		margin: 100px auto;
+		margin: 0 auto;
 		padding: 8%;
 		font-family: 'Lato', sans-serif;
 		background: rgba(255,255,255,0.8);
@@ -61,6 +61,12 @@
 			}
 		}
 
+		.salad{
+			.dressing{
+				text-align: center;
+			}
+		}
+
 		.dessert{
 			p{
 				text-align: center;
@@ -93,7 +99,7 @@
 
 	.menu{
 		width: 400px;
-		margin: 100px auto;
+		margin: 0 auto;
 		padding: 8%;
 		font-family: 'Lato', sans-serif;
 		background: rgba(255,255,255,0.8);
@@ -165,9 +171,17 @@
 			}
 		}
 
-		.dessert{
-			p{
+		.salad{
+			.dressing{
 				text-align: center;
+			}
+		}
+
+		.chicken{
+			.chicken-tray{
+				p{
+					text-align: center;
+				}
 			}
 		}
 
@@ -176,6 +190,38 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+}
+
+// ## MANAGE ##
+
+.switch{
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 50px;
+
+	.restaurant{
+		width: 49%;
+		display: inline-block;
+		font-family: 'Lato';
+		font-size: 20pt;
+		text-align: center;
+
+			a{
+				text-decoration: none;
+			}
+	}
+
+	.catering{
+		width: 49%;
+		display: inline-block;
+		font-family: 'Lato';
+		font-size: 20pt;
+		text-align: center;
+
+			a{
+				text-decoration: none;
+			}
 	}
 }
 

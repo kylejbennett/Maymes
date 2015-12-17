@@ -69,7 +69,7 @@ class DishesController < ApplicationController
     
     if @dish.save
       flash[:notice] = "Your dish has been added"
-      redirect_to manage_path
+      redirect_to newcater_path
     else
       flash[:alert] = "There was a problem with your dish"
       redirect_to new_dish_path
@@ -96,7 +96,7 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:dish).permit(:category, :title, :description, :price, :half, :full)
+    params.require(:dish).permit(:category, :title, :description, :price, :half, :full, :unit)
   end
 
 end

@@ -17,15 +17,14 @@
 					</div>
 					<div class="box-right">
 						<h4>
-							Half Tray <%= number_to_currency(salad.half, :precision => 2) %>
-							<br>
+							Half Tray <%= number_to_currency(salad.half, :precision => 2) %><br>
 							Full Tray <%= number_to_currency(salad.full, :precision => 2) %>
 						</h4>
 					</div>
 				</div>
 			<% end %>
 			<div class="clear"></div>
-			<p>
+			<p class="dressing">
 				CHOICE OF DRESSING:<br>
 				 • House Dressing <br>
 				 • Balsamic Vinaigrette Ranch<br>
@@ -63,41 +62,74 @@
 			<% @extras.each do |extra| %>
 				<div class="item">
 					<h3><b><%= extra.title %></b></h3>
-					<h4><%= number_to_currency(extra.price, :precision => 2) %></h4>
+					<h4><%= number_to_currency(extra.price, :precision => 2) %><%= extra.unit %></h4>
 					<p><%= extra.description %></p>
 				</div>
 			<% end %>
 		</div>
-		<div class="sides menu-section">
+		<div class="meats menu-section">
 			<h2>Meat Specialties</h2>
 			<% @meats.each do |meat| %>
 				<div class="item">
-					<h3><b><%= meat.title %></b></h3>
-					<p><%= meat.description %></p>
+					<div class="box-left">
+						<h3><b><%= meat.title %></b></h3>	
+						<p><%= meat.description %></p>
+					</div>
+					<div class="box-right">
+						<% if meat.unit == 'Normal' %>
+							<h4>
+								Half Tray <%= number_to_currency(meat.half, :precision => 2) %><br>
+								Full Tray <%= number_to_currency(meat.full, :precision => 2) %>
+							</h4>
+						<% else %>
+							<h4><%= number_to_currency(meat.price, :precision => 2) %><%= meat.unit %></h4>
+						<% end %>
+					</div>
 				</div>
 			<% end %>
+			<div class="clear"></div>
 		</div>
-		<div class="beverages menu-section">
+		<div class="chicken menu-section">
 			<h2>Poultry Ideas</h2>
+			<div class="chicken-tray">
+				<p>
+					** All Half Trays $40.00 **<br> 
+					** All Full Trays $75.00 **
+				</p>
+			</div>
 			<% @poultries.each do |poultry| %>
 				<div class="item">
 					<h3><b><%= poultry.title %></b></h3>
+					<% if poultry.unit != 'Normal' %>
+						<h4><%= number_to_currency(poultry.price, :precision => 2) %><%= poultry.unit %></h4>
+					<% end %>
 					<p>
 						<%= poultry.description %>
 					</p>
 				</div>
 			<% end %>
 		</div>
-		<div class="toppings menu-section">
+		<div class="pasta menu-section">
 			<h2>Pastas</h2>
 			<% @pastas.each do |pasta| %>
 				<div class="item">
-					<h3><b><%= pasta.title %></b></h3>
-					<p>
-						<%= pasta.description %>
-					</p>
+					<div class="box-left">
+						<h3><b><%= pasta.title %></b></h3>	
+						<p><%= pasta.description %></p>
+					</div>
+					<div class="box-right">
+						<% if pasta.unit == 'Normal' %>
+							<h4>
+								Half Tray <%= number_to_currency(pasta.half, :precision => 2) %><br>
+								Full Tray <%= number_to_currency(pasta.full, :precision => 2) %>
+							</h4>
+						<% else %>
+							<h4><%= number_to_currency(pasta.price, :precision => 2) %><%= pasta.unit %></h4>
+						<% end %>
+					</div>
 				</div>
 			<% end %>
+			<div class="clear"></div>
 		</div>
 	</div>
 </div>

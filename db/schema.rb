@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216173351) do
+ActiveRecord::Schema.define(version: 20151217152756) do
 
   create_table "dishes", force: :cascade do |t|
     t.string   "category"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20151216173351) do
     t.datetime "updated_at",                          null: false
     t.decimal  "half"
     t.decimal  "full"
+    t.string   "unit"
   end
 
   create_table "users", force: :cascade do |t|
