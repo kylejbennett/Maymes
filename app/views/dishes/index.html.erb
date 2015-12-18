@@ -38,6 +38,20 @@
 				*Dry Bleu Cheese and House Dressing $1.00 extra<br> *All salads served with bread of the day
 			</p>
 		</div>
+		<div class="caesar menu-section">
+			<h2>The Real Caesar Salad</h2>
+			<p>
+				The Caesar dressing is Mayme’s secret recipe and we promised not to tell! All Caesar Salads are served with bread of the day.  We do not use raw eggs.
+			</p>
+			<br>
+			<% @caesars.each do |caesar| %>
+				<div class="item">
+					<h3><b><%= caesar.title %></b></h3>
+					<h4><%= number_to_currency(caesar.price, :precision => 2) %></h4>
+					<p><%= caesar.description %></p>
+				</div>
+			<% end %>
+		</div>
 		<div class="burger menu-section">
 			<h2>George's All American Burgers</h2>
 			<p>

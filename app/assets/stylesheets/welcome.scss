@@ -91,12 +91,59 @@ body{
 
 // ## CONTACT ##
 
-.center{
+.container{
+	margin-left: 300px;
+	margin-right: 100px;
+	margin-top: 100px;
+
 	.contact-body{
+		h1{
+			margin: 25px;
+			font-family: 'Caudex';
+		}
+
+		.contact-specs{
+			font-family: 'Lato';
+			display: inline-block;
+			float: left;
+			margin: 25px;
+		}
+
 		.contact-form{
+			font-family: 'Lato';
+			display: inline-block;
+			float: left;
+			margin: 25px;
+
 			.contact-info{
+				input{
+					height: 40px;
+					width: 300px;
+					text-align: center;
+					font-family: 'Lato';
+					font-size: 16pt;
+				}
+
 				select{
+					height: 30px;
 					width: 200px;
+					font-size: 20pt;
+				}
+
+				textarea{
+					font-family: 'Lato';
+					font-size: 16pt;
+				}
+
+				button{
+					width: 100px;
+					text-align: center;
+					font-family: 'Lato';
+					font-size: 15pt;
+					border: 1px solid lightgray;
+					border-radius: 5px;
+					background: #2268D3;
+					color: white;
 				}
 			}
 		}

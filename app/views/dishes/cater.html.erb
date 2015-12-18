@@ -34,6 +34,20 @@
 				*Dry Bleu Cheese available at extra cost
 			</p>
 		</div>
+		<div class="caesar menu-section">
+			<h2>The Real Caesar Salad</h2>
+			<p>
+				The Caesar dressing is Mayme’s secret recipe and we promised not to tell! We do not use raw eggs.
+			</p>
+			<br>
+			<% @cater_caesar.each do |caesar| %>
+				<div class="item">
+					<h3><b><%= caesar.title %></b></h3>
+					<h4><%= number_to_currency(caesar.price, :precision => 2) %></h4>
+					<p><%= caesar.description %></p>
+				</div>
+			<% end %>
+		</div>
 		<div class="sandwich menu-section">
 			<h2>Deli Sandwich Trays</h2>
 			<p>

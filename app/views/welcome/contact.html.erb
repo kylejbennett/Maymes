@@ -1,29 +1,45 @@
-<div class="center">
-	<div class="contact-body">
-		<div class="contact-form">
+<div class="container">
+	<div class="contact-body row">
+		<h1>Mayme's Cafe & Catering</h1>
+		<div class="contact-form col-md-6">
 		<!-- CONTACT FORM -->
 			<%= form_tag(controller: "welcome", action:"sendmail", method: "post") do %>
 				<!-- FIRST PANEL -->
 				<div class="contact-info">
-					<h2 class="contact-title">CONTACT US!</h2>
-					Subject: <%= select_tag(:subject, options_for_select(['Customer Feedback', 'Catering Inquiry'], selected: :option)) %>
-					<br>
+					<h2 class="contact-title">Contact Us!</h2>
 					<br>
 					<%= text_field_tag(:name, nil, :placeholder => "Your Name", size: "40x1", required: true)%>
 					<br>
 					<br>
 					<%= email_field_tag(:email, nil, :placeholder => "Your Email", size: "40x1", required: true) %>
+					<br>
+					<br>
+					Subject: <%= select_tag(:subject, options_for_select(['Customer Feedback', 'Catering Inquiry'], selected: :option)) %>
 				</div>
 				<br>
 				<!-- SECOND PANEL -->
 				<div class="contact-info">
-					<h3 class="panel-title">Your Comments</h3>
-
 					<%= text_area_tag(:body, nil, :placeholder => "Message", size:"40x12") %>
 					<br>
-					<%= button_tag("Contact", type: 'submit') %>
+					<%= button_tag("Send", type: 'submit') %>
 				</div>
 			<% end %>
+		</div>
+		<div class="contact-specs col-md-6">
+			<h2>Location</h2>
+			<h3>
+				647 State Route 93<br>
+				Suite 5<br>
+				Conyngham, PA 18219<br>
+				(P) 570.359.3663<br>
+				(F) 570.359.3664
+			</h3>
+			<h2>Hours</h2>
+			<h3>
+				Tuesday - Saturday: <span>11:00am - 8:00pm</span><br>
+				Sunday:  10:00am - 3:00pm<br>
+				Monday: Closed
+			</h3>
 		</div>
 	</div>
 </div>

@@ -3,6 +3,7 @@ class DishesController < ApplicationController
     @dishes = Dish.all
     @soups = Dish.where(category: 'Soup')
     @salads = Dish.where(category: 'Salad')
+    @caesars = Dish.where(category: 'Caesar')
     @sandwiches = Dish.where(category: 'Sandwich')
     @seafood = Dish.where(category: 'Seafood Sandwich')
     @vegs = Dish.where(category: 'Veg Sandwich')
@@ -18,6 +19,7 @@ class DishesController < ApplicationController
     @dishes = Dish.all
     @soups = Dish.where(category: 'Soup')
     @salads = Dish.where(category: 'Salad')
+    @caesars = Dish.where(category: 'Caesar')
     @sandwiches = Dish.where(category: 'Sandwich')
     @seafood = Dish.where(category: 'Seafood Sandwich')
     @vegs = Dish.where(category: 'Veg Sandwich')
@@ -28,6 +30,7 @@ class DishesController < ApplicationController
     @sides = Dish.where(category: 'Side')
     @kids = Dish.where(category: 'Kids')
     @cater_salads = Dish.where(category: 'cater_salad')
+    @cater_caesar = Dish.where(category: 'cater_caesar')
     @cater_sandwiches = Dish.where(category: 'cater_sandwich')
     @vegetables = Dish.where(category: 'cater_veg')
     @extras = Dish.where(category: 'cater_extras')
@@ -38,6 +41,7 @@ class DishesController < ApplicationController
 
   def cater
     @cater_salads = Dish.where(category: 'cater_salad')
+    @cater_caesar = Dish.where(category: 'cater_caesar')
     @cater_sandwiches = Dish.where(category: 'cater_sandwich')
     @vegetables = Dish.where(category: 'cater_veg')
     @extras = Dish.where(category: 'cater_extras')
@@ -106,7 +110,7 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:dish).permit(:category, :title, :description, :price, :half, :full, :unit)
+    params.require(:dish).permit(:category, :title, :description, :price, :half, :full, :unit, :status)
   end
 
 end

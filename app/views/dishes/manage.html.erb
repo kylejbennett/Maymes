@@ -49,6 +49,26 @@
 				*Dry Bleu Cheese and House Dressing $1.00 extra<br> *All salads served with bread of the day
 			</p>
 		</div>
+		<div class="caesar menu-section">
+			<h2>The Real Caesar Salad</h2>
+			<p>
+				The Caesar dressing is Mayme’s secret recipe and we promised not to tell! All Caesar Salads are served with bread of the day.  We do not use raw eggs.
+			</p>
+			<br>
+			<% @caesars.each do |caesar| %>
+				<div class="item">
+					<h3><b><%= link_to caesar.title, edit_dish_path(caesar) %></b></h3>
+					<h4><%= number_to_currency(caesar.price, :precision => 2) %></h4>
+					<% if caesar.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => caesar.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => caesar.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
+					<p><%= caesar.description %></p>
+				</div>
+			<% end %>
+		</div>
 		<div class="burger menu-section">
 			<h2>George's All American Burgers</h2>
 			<p>
@@ -254,6 +274,26 @@
 				 • Creamy Cucumber<br>
 				*Dry Bleu Cheese available at extra cost
 			</p>
+		</div>
+		<div class="caesar menu-section">
+			<h2>The Real Caesar Salad</h2>
+			<p>
+				The Caesar dressing is Mayme’s secret recipe and we promised not to tell! We do not use raw eggs.
+			</p>
+			<br>
+			<% @cater_caesar.each do |caesar| %>
+				<div class="item">
+					<h3><b><%= link_to caesar.title, edit_dish_path(caesar) %></b></h3>
+					<h4><%= number_to_currency(caesar.price, :precision => 2) %></h4>
+					<% if caesar.status != 'Inactive' %>
+						<%=link_to '<i class="fa fa-minus-circle"></i>'.html_safe, deactivate_path(:id => caesar.id), method: :post, remote: true, class: "deactivation" %>
+					<% else %>
+						<%=link_to '<i class="fa fa-plus-circle"></i>'.html_safe, activate_path(:id => caesar.id), method: :post, remote: true, class: "activation" %>
+					<% end %>
+					<i class="fa fa-check-circle"></i>
+					<p><%= caesar.description %></p>
+				</div>
+			<% end %>
 		</div>
 		<div class="sandwich menu-section">
 			<h2>Deli Sandwich Trays</h2>
