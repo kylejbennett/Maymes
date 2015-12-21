@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$(".fa-check-circle").hide();
+	$(".appear").hide();
 	$(".cater").hide();
 	$(".restaurant").css("border", "2px solid lightgray");
 	$(".catering").css("border", "2px solid white");
@@ -27,13 +27,18 @@ $(document).ready(function(){
 	$(".activation").on("ajax:complete", function(event){   
 		$(event.currentTarget).hide();
 		$(event.currentTarget).next().show(); 
+	});
+
+	$(".appear").on("ajax:complete", function(event){   
+		$(event.currentTarget).hide();
+		$(event.currentTarget).prev().show(); 
 	});
 
 });
 
 $(document).on('page:load', function(event) {
 
-	$(".fa-check-circle").hide();
+	$(".appear").hide();
 	$(".cater").hide();
 	$(".restaurant").css("border", "2px solid lightgray");
 	$(".catering").css("border", "2px solid white");
@@ -60,6 +65,11 @@ $(document).on('page:load', function(event) {
 	$(".activation").on("ajax:complete", function(event){   
 		$(event.currentTarget).hide();
 		$(event.currentTarget).next().show(); 
+	});
+
+	$(".appear").on("ajax:complete", function(event){   
+		$(event.currentTarget).hide();
+		$(event.currentTarget).prev().show(); 
 	});
 
 });

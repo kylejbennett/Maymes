@@ -16,6 +16,14 @@ class DishesController < ApplicationController
   end
 
   def manage
+
+    if current_user
+      @user = User.find(current_user[:id])
+    else
+      flash[:notice] = "Please login or sign up"
+      redirect_to login_path
+    end
+
     @dishes = Dish.all
     @soups = Dish.where(category: 'Soup')
     @salads = Dish.where(category: 'Salad')
@@ -52,15 +60,38 @@ class DishesController < ApplicationController
   end
 
   def newcater
+
+    if current_user
+      @user = User.find(current_user[:id])
+    else
+      flash[:notice] = "Please login or sign up"
+      redirect_to login_path
+    end
   
   end
 
   def new
 
+    if current_user
+      @user = User.find(current_user[:id])
+    else
+      flash[:notice] = "Please login or sign up"
+      redirect_to login_path
+    end
+
   end
 
   def edit
+
+    if current_user
+      @user = User.find(current_user[:id])
+    else
+      flash[:notice] = "Please login or sign up"
+      redirect_to login_path
+    end
+
     @dish = Dish.find(params[:id])
+
   end
 
   def show

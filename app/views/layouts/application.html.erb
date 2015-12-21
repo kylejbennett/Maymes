@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mayme's Cafe & Catering</title>
+  <title>Mayme's Cafe and Catering</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Mayme's Cafe and Catering provides the best quality food in the Conyngham and Hazelton area.">
+  <meta name="keywords" content="Catering, Cafe, Conyngham, Mayme's, restaurant, lunch, dinner" >
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -28,17 +31,19 @@
 				<%= link_to 'CAFE HOME', root_path %>
 			</li>
 			<li>
-				<%= link_to 'DAILY FEATURES', 'https://www.facebook.com/maymescafe/' %>
-			</li>
-			<li>
 				<%= link_to 'CAFE MENU', dishes_path %>
 			</li>
 			<li>
 				<%= link_to 'CATERING MENU', cater_path %>
 			</li>
 			<li>
+				<%= link_to 'DAILY FEATURES', 'https://www.facebook.com/maymescafe/', :target => "_blank" %>
+			</li>
+			<!--
+			<li>
 				<%= link_to 'MEET MAYME', welcome_mayme_path %>
 			</li>
+			-->
 			<li>
 				<%= link_to 'CONTACT US', welcome_contact_path %>
 			</li>
