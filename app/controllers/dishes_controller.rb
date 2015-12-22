@@ -114,10 +114,10 @@ class DishesController < ApplicationController
     
     if @dish.save
       flash[:notice] = "Your dish has been added"
-      redirect_to newcater_path
+      redirect_to manage_path
     else
       flash[:alert] = "There was a problem with your dish"
-      redirect_to new_dish_path
+      redirect_to manage_path
     end
   end
 
