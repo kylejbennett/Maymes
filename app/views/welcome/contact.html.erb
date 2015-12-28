@@ -2,10 +2,9 @@
 <div class="container">
 	<div class="contact-body row">
 		<h1>Mayme's Cafe & Catering</h1>
+		<!--
 		<div class="contact-form col-md-6">
-		<!-- CONTACT FORM -->
 			<%= form_tag(controller: "welcome", action:"sendmail", method: "post") do %>
-				<!-- FIRST PANEL -->
 				<div class="contact-info">
 					<h2 class="contact-title">Contact Us!</h2>
 					<br>
@@ -18,7 +17,6 @@
 					Subject: <%= select_tag(:subject, options_for_select(['Customer Feedback', 'Catering Inquiry'], selected: :option)) %>
 				</div>
 				<br>
-				<!-- SECOND PANEL -->
 				<div class="contact-info">
 					<%= text_area_tag(:body, nil, :placeholder => "Message", size:"40x12") %>
 					<br>
@@ -26,6 +24,8 @@
 				</div>
 			<% end %>
 		</div>
+	-->
+
 		<div class="contact-specs col-md-6">
 			<h2>Location</h2>
 			<h3>

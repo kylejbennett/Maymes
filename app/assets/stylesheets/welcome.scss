@@ -101,13 +101,16 @@ body{
 }
 
 .container{
-	margin-left: 300px;
-	margin-right: 100px;
-	margin-top: 100px;
-	margin-bottom: 100px;
+	// margin-left: 300px;
+	// margin-right: 100px;
+	// margin-top: 100px;
+	// margin-bottom: 100px;
+	margin: 50px;
 
 	.contact-body{
 		background: rgba(255,255,255,0.6);
+		width: 500px;
+		margin: 0 auto;
 		padding: 5%;
 
 		h1{
