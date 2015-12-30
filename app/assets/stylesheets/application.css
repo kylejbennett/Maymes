@@ -49,11 +49,11 @@
 
 .nav a{
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 .nav a:hover{
-	color: blue;
+	color: #6C1C1C;
 }
 
 .session{
